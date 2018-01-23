@@ -61,6 +61,8 @@ function_display = function(corpus_dtm_tf)
   library(wordcloud)
   require(igraph)
   library(igraph)
+  require(ggplot2)
+  library(ggplot2)
   ##Wordcloud
   display_word_cloud=function(corpus_dtm_tf){
     corpus_dtm=as.matrix(corpus_dtm_tf)
@@ -92,7 +94,7 @@ function_display = function(corpus_dtm_tf)
     ###Cooccurence graph
     s<-6
     k1<-12
-    title<-'Nokia COG'
+    title<-'COG'
     
     corpus_mat = as.matrix(corpus_dtm_tf)   # need it as a regular matrix for matrix ops like %*% to apply
     adj.mat = t(corpus_mat) %*% corpus_mat    # making a square symmatric term-term matrix 
